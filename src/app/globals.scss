@@ -2,14 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* For WebKit browsers (e.g. Chrome, Safari) */
 ::-webkit-scrollbar {
   width: 10px;
 }
+
+::-webkit-scrollbar-track {
+  // background: #f1f1f1;
+}
+
 ::-webkit-scrollbar-thumb {
+  // background: ;
+  @apply bg-gray-300;
   border-radius: 10px;
 }
+
+/* For Firefox */
+/* scrollbar-color: pink #f1f1f1; */
+#specifyColor {
+  // accent-color: #fb2e86;
+}
 .container {
-  @apply w-[95%] lg:w-[90%] m-auto;
+  @apply w-[90%] lg:w-[70%] m-auto;
 }
 .transistionMode {
   @apply transition duration-500 ease-in delay-200;
