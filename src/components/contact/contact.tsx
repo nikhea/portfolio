@@ -20,9 +20,12 @@ const Contact = () => {
     <div className={`container`}>
       <div className={` my-20  flex flex-col justify-center`}>
         {" "}
-        <div className="my-10 text-center lg:text-start">
+        <div className="my-10 space-y-3 text-center lg:text-start">
           <h1 className="text-xl font-bold text-blue-600 uppercase">contact</h1>
-          <p className="text-2xl font-bold">Don't be shy! Hit me up! 👇</p>
+          <p className="text-2xl font-bold text-black-gray">
+            Feel free to reach out to me using the following contact information
+            👇
+          </p>
         </div>
         <div className="flex flex-col items-center gap-10 my-5 lg:flex-row">
           {contact}
