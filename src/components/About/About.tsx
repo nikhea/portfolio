@@ -7,7 +7,7 @@ import Image from "next/image";
 const About = () => {
   const Altname = `imonikhea ugbodaga`;
   return (
-    <div className="container ">
+    <section id="about" className="container ">
       <div className="grid gap-10 my-20 lg:grid-cols-2 place-content-center">
         <div className="w-full h-full rounded-md bg-slate-400">
           <div className="relative w-full h-full">
@@ -48,7 +48,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

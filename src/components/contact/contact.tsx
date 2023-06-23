@@ -17,7 +17,7 @@ const Contact = () => {
     </div>
   ));
   return (
-    <div className={`container`}>
+    <section id="contact" className={`container`}>
       <div className={` my-20  flex flex-col justify-center`}>
         {" "}
         <div className="my-10 space-y-3 text-center lg:text-start">
@@ -31,7 +31,7 @@ const Contact = () => {
           {contact}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+section {
+  /* Add margin or padding to create space between the section and the navbar */
+  padding-top: 50px; /* Adjust the value as needed */
+}
+
 /* For WebKit browsers (e.g. Chrome, Safari) */
 ::-webkit-scrollbar {
   width: 10px;
@@ -24,6 +29,9 @@
 }
 .container {
   @apply w-[90%] lg:w-[70%] m-auto;
+}
+.containerLG {
+  @apply w-[95%] lg:w-[90%] m-auto;
 }
 .transistionMode {
   @apply transition duration-500 ease-in delay-200;
