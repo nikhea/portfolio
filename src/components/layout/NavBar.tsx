@@ -3,42 +3,15 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Drawer from "../Drawer/Drawer";
+import { navList } from "@/data/navlist";
+import useSmoothScroll from "@/hooks/useSmoothScroll";
 
 const NavBar = () => {
+  useSmoothScroll();
   const [isOpen, setIsOpen] = useState(false);
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
-
-  useEffect(() => {
-    const smoothScroll = (event: any) => {
-      event.preventDefault();
-      const target = event.target.getAttribute("href");
-      const element = document.querySelector(target);
-
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-          inline: "nearest",
-        });
-        const navbarHeight = document.querySelector("nav")?.offsetHeight;
-        const section = document.querySelector(target);
-        section.style.marginTop = `-${navbarHeight}px`;
-      }
-    };
-
-    const navLinks = document.querySelectorAll(".nav-link");
-    navLinks.forEach((link) => {
-      link.addEventListener("click", smoothScroll);
-    });
-
-    return () => {
-      navLinks.forEach((link) => {
-        link.removeEventListener("click", smoothScroll);
-      });
-    };
-  }, []);
   const displayNavList = navList.map((list, index) => (
     <li key={index}>
       <Link className="nav-link hover:text-blue-600" href={list.link}>
@@ -65,22 +38,33 @@ const NavBar = () => {
   );
 };
 
-const navList = [
-  {
-    name: "Home",
-    link: "#home",
-  },
-  {
-    name: "about",
-    link: "#about",
-  },
-  {
-    name: "projects",
-    link: "#projects",
-  },
-  {
-    name: "contact",
-    link: "#contact",
-  },
-];
 export default NavBar;
+// useEffect(() => {
+//   const smoothScroll = (event: any) => {
+//     event.preventDefault();
+//     const target = event.target.getAttribute("href");
+//     const element = document.querySelector(target);
+
+//     if (element) {
+//       element.scrollIntoView({
+//         behavior: "smooth",
+//         block: "start",
+//         inline: "nearest",
+//       });
+//       const navbarHeight = document.querySelector("nav")?.offsetHeight;
+//       const section = document.querySelector(target);
+//       section.style.marginTop = `-${navbarHeight}px`;
+//     }
+//   };
+
+//   const navLinks = document.querySelectorAll(".nav-link");
+//   navLinks.forEach((link) => {
+//     link.addEventListener("click", smoothScroll);
+//   });
+
+//   return () => {
+//     navLinks.forEach((link) => {
+//       link.removeEventListener("click", smoothScroll);
+//     });
+//   };
+// }, []);
