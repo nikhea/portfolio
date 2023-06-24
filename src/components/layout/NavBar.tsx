@@ -1,8 +1,15 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import Drawer from "../Drawer/Drawer";
 
 const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleDrawer = () => {
+    setIsOpen((prevState) => !prevState);
+  };
+
   useEffect(() => {
     const smoothScroll = (event: any) => {
       event.preventDefault();
@@ -40,13 +47,20 @@ const NavBar = () => {
     </li>
   ));
   return (
-    <nav className=" sticky top-0 left-0 right-0 bg-white z-50 shadow-md  py-5">
-      <div className="containerLG  text-black-gray font-bold items-center flex justify-between">
-        <h1 className=" text-xl">Fortune.dev</h1>
-        <ul className=" text-lg space-x-5 capitalize  items-center flex justify-between">
+    <nav className="sticky top-0 left-0 right-0 z-50 py-5 bg-white shadow-md ">
+      <div className="flex items-center justify-between font-bold containerLG text-black-gray">
+        <h1 className="text-xl ">Fortune.dev</h1>
+        <ul className="items-center justify-between hidden space-x-5 text-lg capitalize lg:flex">
           {displayNavList}
         </ul>
+        <div
+          onClick={toggleDrawer}
+          className="flex text-lg cursor-pointer hover:text-blue-600 lg:hidden"
+        >
+          <GiHamburgerMenu className="" />
+        </div>
       </div>
+      <Drawer isOpen={isOpen} toggleDrawer={toggleDrawer} />
     </nav>
   );
 };
