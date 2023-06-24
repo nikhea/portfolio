@@ -34,7 +34,7 @@ const Drawer = ({ toggleDrawer, isOpen }: any) => {
           <MdClose className="w-8 h-8 text-2xl" />
         </div>
         <div className="grid h-full text-lg text-center capitalize place-content-center lg:hidden">
-          <ul className="space-y-20 ">{displayNavList}</ul>
+          <ul className="space-y-10">{displayNavList}</ul>
         </div>
       </DrawerComponents>
     </>

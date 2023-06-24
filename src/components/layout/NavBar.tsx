@@ -22,7 +22,11 @@ const NavBar = () => {
   return (
     <nav className="sticky top-0 left-0 right-0 z-50 py-5 bg-white shadow-md ">
       <div className="flex items-center justify-between font-bold containerLG text-black-gray">
-        <h1 className="text-xl ">Fortune.dev</h1>
+        <h1 className="text-xl ">
+          <Link className="nav-link hover:text-blue-600" href="#home">
+            Fortune.dev
+          </Link>
+        </h1>
         <ul className="items-center justify-between hidden space-x-5 text-lg capitalize lg:flex">
           {displayNavList}
         </ul>
