@@ -39,12 +39,12 @@ export default Contact;
 
 export const ContactData = [
   {
-    icon: <FaMapMarkedAlt className="w-10 h-10 text-blue-600 " />,
+    icon: <FaMapMarkedAlt className="w-10 h-10 text-black-gray " />,
     name: "Location",
     text: "Lagos, Nigeria",
   },
   {
-    icon: <FaMailBulk className="w-10 h-10 text-blue-600" />,
+    icon: <FaMailBulk className="w-10 h-10 text-black-gray" />,
     name: "mail",
     text: "imonikheaugbodaga@gmail.com",
   },

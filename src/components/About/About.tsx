@@ -1,6 +1,7 @@
 import React from "react";
 import AboutImage from "../../../public/images/aboutme.webp";
 import Image from "next/image";
+import { qulificationTitle } from "../Hero/HeroText";
 
 const About = () => {
   const Altname = `imonikhea ugbodaga`;
@@ -23,17 +24,17 @@ const About = () => {
               About me
             </h1>
             <p className="text-2xl font-bold text-center capitalize lg:text-start text-black-gray">
-              A committed full-Stack Developer based in Lagos, Nigeria 📍
+              A passionate {qulificationTitle} based in Lagos, Nigeria 📍
             </p>
           </div>
           <div className="space-y-5 text-center text-gray-500 lg:text-justify">
             <p>
-              As a seasoned Full-Stack Developer, I command a formidable range
-              of skills encompassing HTML, CSS, JavaScript, React, Tailwind,
-              SCSS, and Next.js for frontend development. On the backend, my
-              expertise lies in Node.js, Express, MongoDB, and RESTful APIs. I
-              exhibit exceptional proficiency in designing and maintaining
-              responsive websites that prioritize a seamless user experience.
+              As a seasoned {qulificationTitle}, I command a formidable range of
+              skills encompassing HTML, CSS, JavaScript, React, Tailwind, SCSS,
+              and Next.js for frontend development. On the backend, my expertise
+              lies in Node.js, Express, MongoDB, and RESTful APIs. I exhibit
+              exceptional proficiency in designing and maintaining responsive
+              websites that prioritize a seamless user experience.
             </p>
             <p>
               My forte lies in crafting dynamic and captivating interfaces
