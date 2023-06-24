@@ -1,5 +1,6 @@
 import React from "react";
 import Social from "../Social/Social";
+import Link from "next/link";
 
 const HeroText = () => {
   return (
@@ -10,8 +11,18 @@ const HeroText = () => {
         Lagos, Nigeria. 📍
       </p>
       <Social />
+      <Link
+        href={resumeLink}
+        target="_blank"
+        rel="noopener"
+        className="px-5 py-3 font-bold text-center text-white capitalize rounded-full lg:px-3 w-fit lg:w-full bg-black-gray"
+      >
+        view resume
+      </Link>
     </div>
   );
 };
 
 export default HeroText;
+
+const resumeLink = `https://docs.google.com/document/d/e/2PACX-1vS73DYM3R2PPQZeQb7P-FmrikJnAjCRy_sg56LwtdxdIagy2ve_bEn6BYi5THGNIQZd19ULB7kuonDL/pub`;
