@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { FaHtml5, FaCss3 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -18,21 +18,33 @@ const TechStack = () => {
   const displayIcons = icons.map((icon, index) => (
     <div
       key={index}
-      data-tip="This is a tooltip"
-      className="flex items-center justify-center w-10 h-10 p-2 mx-2 text-3xl bg-white rounded-full shadow-xl cursor-pointer"
+      data-tip={icon.name}
+      // title={icon.name}
+      className="flex items-center justify-center w-10 h-10 p-2 m-2 text-3xl bg-white rounded-full shadow-xl cursor-pointer"
     >
-      {icon.icon} <Tooltip />
+      {icon.icon}
     </div>
   ));
+
+  useEffect(() => {
+    // Tooltip.rebuild()
+  }, []);
   return (
-    <div className="container flex items-center">
-      <h1 className="font-bold ">
-        TechStack <span className="mx-5 font-bold">|</span>
+    <section className="container flex flex-col items-center justify-center">
+      <h1 className="mb-3 text-xl font-bold text-center text-blue-600 uppercase lg:text-start">
+        TechStack
       </h1>
-      <div className="flex items-center"> {displayIcons}</div>
-    </div>
+      <div className="grid grid-cols-4 lg:grid-cols-6"> {displayIcons}</div>
+      <Tooltip />
+    </section>
   );
 };
+// TechStack <span className="mx-5 font-bold">|</span>
+
+// className="flex items-center justify-center w-10 h-10 p-2 mx-2 text-3xl bg-white rounded-full shadow-xl cursor-pointer"
+{
+  /* <div className="container flex items-center"> */
+}
 
 export default TechStack;
 
