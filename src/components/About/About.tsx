@@ -29,21 +29,22 @@ const About = () => {
           </div>
           <div className="space-y-5 text-center text-gray-500 lg:text-justify">
             <p>
-              As a seasoned {qulificationTitle}, I command a formidable range of
-              skills encompassing HTML, CSS, JavaScript, React, Tailwind, SCSS,
-              and Next.js for frontend development. On the backend, my expertise
+              {/* seasoned */}
+              As a {qulificationTitle}, I command a formidable range of skills
+              encompassing HTML, CSS, JavaScript, React, Tailwind, SCSS, and
+              Next.js for frontend development. On the backend, my expertise
               lies in Node.js, Express, MongoDB, and RESTful APIs. I exhibit
               exceptional proficiency in designing and maintaining responsive
               websites that prioritize a seamless user experience.
             </p>
-            <p>
+            {/* <p>
               My forte lies in crafting dynamic and captivating interfaces
               through the authorship of clean and optimized code, employing
               state-of-the-art development tools and methodologies. I take
               immense pride in my ability to collaborate seamlessly within
               cross-functional teams, facilitating the creation of exceptional
               web applications.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
