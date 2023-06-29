@@ -14,7 +14,7 @@ const Projects = () => {
         index % 2 === 0 ? "lg:justify-start" : "lg:justify-end"
       }`}
     >
-      <div className="relative flex w-[500px] h-[500px] lg:w-full lg:h-full bg-red-500 rounded-md">
+      <div className="relative flex  h-[200px] md:w-full md:h-full bg-red-500 rounded-md">
         <Image
           src={project.image}
           alt={project.title}
@@ -51,7 +51,7 @@ const Projects = () => {
     </div>
   ));
   return (
-    <section id="projects" className="pb-5  bg-light-gray">
+    <section id="projects" className="pb-5 bg-light-gray">
       <div className="container mb-4">
         <h1 className="text-xl font-bold text-center text-blue-600 uppercase lg:text-start">
           projects
