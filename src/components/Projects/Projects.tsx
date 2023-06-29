@@ -51,7 +51,7 @@ const Projects = () => {
     </div>
   ));
   return (
-    <section id="projects" className=" bg-light-gray">
+    <section id="projects" className=" bg-light-gray pb-5">
       <div className="container mb-4">
         <h1 className="text-xl font-bold text-center text-blue-600 uppercase lg:text-start">
           projects
