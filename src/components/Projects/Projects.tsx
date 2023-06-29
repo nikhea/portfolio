@@ -2,7 +2,8 @@ import { projectsData } from "@/data/projects";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 import AboutImage from "../../../public/images/aboutme.webp";
 
 const Projects = () => {
@@ -42,7 +43,7 @@ const Projects = () => {
             target="_blank"
             rel="noopener"
           >
-            <FaLinkedin className="mr-3 icons" />
+            <FiExternalLink className="mr-3 icons" />
             live app
           </Link>
         </div>
