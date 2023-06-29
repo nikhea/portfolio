@@ -16,7 +16,7 @@ const Projects = () => {
     >
       <div className="relative flex w-[500px] h-[500px] lg:w-full lg:h-full bg-red-500 rounded-md">
         <Image
-          src={AboutImage}
+          src={project.image}
           alt={project.title}
           className="object-cover w-full h-full rounded-md"
           layout="fill"
@@ -51,7 +51,7 @@ const Projects = () => {
     </div>
   ));
   return (
-    <section id="projects" className=" bg-light-gray pb-5">
+    <section id="projects" className="pb-5  bg-light-gray">
       <div className="container mb-4">
         <h1 className="text-xl font-bold text-center text-blue-600 uppercase lg:text-start">
           projects
