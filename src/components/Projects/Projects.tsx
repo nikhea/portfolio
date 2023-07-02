@@ -10,11 +10,11 @@ const Projects = () => {
   const displayProjects = projectsData.map((project, index) => (
     <div
       key={index}
-      className={`grid items-center h-full gap-10 my-20 lg:grid-cols-2 place-content-center      ${
+      className={`grid items-center h-full text-black-gray gap-10 my-20 lg:grid-cols-2 place-content-center      ${
         index % 2 === 0 ? "lg:justify-start" : "lg:justify-end"
       }`}
     >
-      <div className="relative flex  h-[200px] md:w-full md:h-full bg-red-500 rounded-md">
+      <div className="relative flex  h-[500px] md:w-full md:h-full  rounded-md">
         <Image
           src={project.image}
           alt={project.title}
@@ -34,7 +34,7 @@ const Projects = () => {
             target="_blank"
             rel="noopener"
           >
-            <FaGithub className="mr-3 icons" />
+            <FaGithub className="mr-3 icons__noAnimation" />
             code
           </Link>
           <Link
@@ -43,7 +43,7 @@ const Projects = () => {
             target="_blank"
             rel="noopener"
           >
-            <FiExternalLink className="mr-3 icons" />
+            <FiExternalLink className="mr-3 icons__noAnimation" />
             live app
           </Link>
         </div>

@@ -39,3 +39,7 @@ section {
 .icons {
   @apply w-6 h-6 mr-2 hover:scale-110 transition duration-500 ease-in delay-200;
 }
+
+.icons__noAnimation {
+  @apply w-6 h-6 mr-2 hover:scale-110 transition duration-100 ease-in delay-200;
+}
