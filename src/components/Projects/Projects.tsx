@@ -23,11 +23,11 @@ const Projects = () => {
         />
       </div>
       <div className="space-y-3">
-        <h1 className="text-xl font-bold text-center capitalize lg:text-start ">
+        <h1 className="text-xl font-bold text-center capitalize  ">
           {project.title}
         </h1>
-        <p className="text-center lg:text-justify">{project.discription}</p>
-        <div className="flex items-center justify-center gap-5 mb-5 font-bold capitalize lg:justify-start">
+        <p className="text-center  text-[#767676]">{project.discription}</p>
+        <div className="flex items-center  gap-5 mb-5 font-bold capitalize">
           <Link
             className="flex items-center hover:text-blue-600"
             href={project.githubLink}
